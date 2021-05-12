@@ -52,7 +52,6 @@ namespace AwesomeService
             FileAccessWatcher.RegisterWaitForFileAccess(e.FullPath);
         }
 
-
         private void FileAccessWatcher_FileFinishedCopying(object sender, FileSystemEventArgs e)
         {
             var user = OnLoadVariables.Users.Find(x => x.ScreenshotFolder == new DirectoryInfo(e.FullPath).Parent.FullName);

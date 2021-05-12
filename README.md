@@ -1,4 +1,5 @@
 # AwesomeService
+![LOGO](./README/IMG/AwesomeService.png)
 Small project to familiarise myself with .net 5.0 services.
 
 Project is designed as a service running with system permissions
