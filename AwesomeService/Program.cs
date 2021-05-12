@@ -1,8 +1,6 @@
 ﻿using CommandLine;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.EventLog;
 using System.Threading.Tasks;
 namespace AwesomeService
 {
@@ -22,16 +20,12 @@ namespace AwesomeService
 
         public static IHostBuilder CreateHostBuilder(string[] args, CommandLineOptions opts) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureLogging(configureLogging => configureLogging.AddFilter<EventLogLoggerProvider>(level => level >= LogLevel.Information))
+                
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddSingleton(opts);
-                    services.AddHostedService<AwesomeWorker>()
-                        .Configure<EventLogSettings>(config =>
-                        {
-                            config.LogName = "AwesomeService";
-                            config.SourceName = "AwesomeService Source";
-                        });
+                    services.AddHostedService<AwesomeWorker>();
+                        
                 }).UseWindowsService();
     }
 }
