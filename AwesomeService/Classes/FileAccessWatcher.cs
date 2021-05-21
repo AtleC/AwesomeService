@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AwesomeService.Classes
 {
+/// shamelessly borrowed from https://newbedev.com/wait-for-file-to-be-freed-by-process
     public class FileAccessWatcher
     {
         // this list keeps track of files being watched
