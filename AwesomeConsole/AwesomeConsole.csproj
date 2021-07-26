@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutDir>C:\Build\Awesome\</OutDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Pipes.AccessControl" Version="5.0.0" />
+    <PackageReference Include="System.Security.AccessControl" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

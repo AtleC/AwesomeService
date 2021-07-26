@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AwesomeConsole2": {
+      "commandName": "Project",
+      "commandLineArgs": "spawnclient"
+    }
+  }
+}
